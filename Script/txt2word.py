@@ -3,10 +3,11 @@
 #本脚本参考自[使用python提取英文文章中的单词及出现的次数(原创)](http://www.51testing.com/html/53/61753-154953.html)
 import re
 import string
+import sys
 #输出文件
-f = open("output.txt","w")
+f = open(sys.argv[2],"w")
 #输入文件
-r = open("input.txt","r")
+r = open(sys.argv[1],"r")
 strs =r.read()
 ##使用正则表达式，把单词提出出来，并都修改为小写格式
 s = re.findall("\w+",str.lower(strs))
